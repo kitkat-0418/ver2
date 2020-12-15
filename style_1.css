@@ -1,0 +1,279 @@
+
+    * {margin:0; padding:0;}
+    #st{width:480px; margin:0 auto;}
+    body{background-color: #ffffff;}
+    header{width: 100%; height: 30px;background: #200122;}
+    #beader_manu{width: 100%; height: 40px;background: #200122;}
+    #banner{width: 100%; height: 250px;}
+    #section1{overflow: hidden;}
+      #section1 .section_side2{float: left; width: 100%;height: 270px;background-color: white;}
+      #section1 .section_side3{float: left; width: 100%;height: 270px;background-color: white;}
+      #section1 .section_side1{float: left; width: 100%;height: 300px;background-color: white;}
+    #footer{width:100%; height: 50px;background-color:white;}
+header, a, i {
+  text-decoration: none;
+  color: white;
+}
+
+/* 헤더에 대한 디자인 요소 */
+#header{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.header__logo{
+  font-size: 25px;
+  font-family: 'East Sea Dokdo';
+}
+#beader_manu{
+  display: flex;
+  justify-content: center;
+  font-family: 'Noto Sans KR';
+  font-size: 13px;
+}
+.beader_manu_bar ul li{
+  list-style: none;
+  float: left;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+/* 배너 슬라이드에 대한 디자인 요소 */
+.slider{
+    width: 480px; /*이미지 사진 사이즈 크기*/
+    height: 240px;
+    position: relative;
+    margin: 0;
+    padding-top: 10px;
+    padding: 12px;
+    overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
+}
+.slider input[type=radio]{
+    display: none;
+}
+
+#imgholder img { /*이미지 크기 조절할 때는 여기를 쓰시오*/
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  padding-left: 80px;
+}
+ul.imgs{
+    padding: 0;
+    margin: 0;
+}
+ul.imgs li{
+    position: absolute;
+    left: 640px;
+    transition-delay: 0; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.bullets{
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
+    bottom: 35px; /*버튼 위치 바꾸*/
+    z-index: 1;
+}
+.bullets label{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.55);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+    background-color: #6f0000;
+}
+.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+    background-color: #6f0000;
+}
+.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+    background-color: #6f0000;
+}
+.slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+    background-color: #6f0000;
+}
+.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+/* 최신 드라마 리스트에 대한 디자인 요소 */
+.new_drama {
+  display: flex;
+  left: 10px;
+}
+.section_side2 .new_drama {
+  margin-left: 10px;
+  padding: 15px;
+  font-family: 'Noto Sans KR';
+  color: #200122;
+  font-size: 13px;
+}
+.new_drama i{
+color: #200122;
+margin-left: 5px;
+margin-top: 5px;
+font-size: 20px;
+}
+.new_drama a{
+color: #200122;
+}
+
+
+#drama_cards {
+  margin: 0;
+  padding:0;
+  display: flex;
+  justify-content: space-around;
+}
+#drama_cards .new_drama_card {
+  width: 115px;
+  height: 150px;
+}
+.new_drama_card img {
+  width: 100%;
+  height: 100%;
+}
+.new_drama_card h4{
+  color: black;
+  font-size: 15px;
+  text-align: center;
+}
+/* 인3 드라마 리스트에 대한 디자인 요소 */
+.pop_drama {
+  display: flex;
+  left: 10px;
+}
+.section_side3 .pop_drama {
+  margin-left: 10px;
+  padding: 15px;
+  font-family: 'Noto Sans KR';
+  color: #200122;
+  font-size: 13px;
+}
+.pop_drama i{
+color: #200122;
+margin-left: 5px;
+margin-top: 5px;
+font-size: 20px;
+}
+.pop_drama a{
+color: #200122;
+}
+
+#drama_cards {
+  margin: 0;
+  padding:0;
+  display: flex;
+  justify-content: space-around;
+}
+#drama_cards .pop_drama_card {
+  width: 115px;
+  height: 150px;
+}
+.pop_drama_card img {
+  width: 100%;
+  height: 100%;
+}
+.pop_drama_card h4{
+  color: black;
+  font-size: 15px;
+  text-align: center;
+}
+/* 번역러 리스트에 대한 디자인 요소 */
+
+.section_side1{
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR';
+}
+
+#translator_list{
+  padding: 0px;
+}
+#translator_list .translator_list_thai{
+  position: relative;
+  margin: 10px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #200122;
+  border: 1px solid #200122;
+}
+
+#translator_list .translator_list_thai i {
+  color: white;
+  font-size: 17px;
+}
+
+#translator_list i{
+  text-decoration: none;
+  list-style: none;
+  color: #200122;
+  font-size: 15px;
+}
+#translator_list a{
+  text-decoration: none;
+  list-style: none;
+  color: #200122;
+  font-size: 15px;
+}
+
+#translator_list .thai_listi{
+  margin: 10px;
+  position: relative;
+  line-height: 40px;
+}
+#translator_list .thai_listi li{
+  border-bottom: 1px solid #200122;
+  padding-left: 5px;
+  list-style: none;
+}
+#translator_list .thai_listi a:hover{
+  color: #6f0000;
+}
+
+/* footer에 대한 디자인 요소 */
+footer {
+  color: #200122;
+  font-family: 'Noto Sans KR';
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+.footer_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer_content h4{
+  font-size: 12px;
+  padding-top: 10px;
+  margin: 0px;
+}
+#footer .footer_content i{
+  color: #200122;
+}
